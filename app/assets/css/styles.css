@@ -1,0 +1,409 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	background: #fff;
+	
+}
+
+body{
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+	color:#888;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+/*--------------------------
+	Top Bar with Headings
+---------------------------*/
+
+
+h1,h2{
+	color: #000;
+	line-height: 1;
+	background-color: none;
+	font-family: 'Segoe UI Light','Segoe UI',Arial,sans-serif;
+	font-weight: normal;
+	margin-top: 20px;
+}
+
+h1{
+	font-size: 33px;
+	padding: 5px 15px 10px;
+	top: 34px;
+}
+
+h2{
+	font-size: 14px;
+	padding: 4px 13px 9px 11px;
+	top: 82px;
+}
+
+h3{
+font-family: 'Press Start 2P', cursive;
+font-weight: 400; 
+font-size: 13px;
+color: white;
+}
+
+h4{
+font-family: 'Oleo Script', cursive;
+font-size: 36px;
+}
+
+#topBar{
+  margin-left: auto ;
+  margin-right: auto ;
+  text-align: center;
+}
+
+
+
+
+/*-------------------
+	Photo area
+--------------------*/
+
+
+#container{
+	/* margin: 60px auto 100px; */
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 114%;
+}
+
+#container:hover a{
+	opacity:0.75;
+}
+
+#container a,
+#loadMore{
+	background-position: center center;
+	background-color: rgba(14, 14, 14, 0.3);
+	float: left;
+	height: 154px;
+/*	margin: 1px 1px 0 0; */
+	overflow: hidden;
+	width: 154px;
+	
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+
+#container a:hover{
+	opacity:1;
+}
+
+#loadMore{
+	cursor: pointer;
+	line-height: 110px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size:10px;
+}
+
+#loadMore:hover{
+	color:#fff;
+	text-shadow:0 0 4px #fff;
+}
+
+
+/*----------------------
+	Info Button
+-----------------------*/
+
+.footsie {
+position: fixed;
+right: 65px;
+text-align: right;
+top: 26px;
+z-index: 999;
+}
+
+#heart {
+width: 38px;
+height: 37px;
+position: absolute;
+margin-left:50%;
+z-index: 9;
+top: 12%;
+background: url("../img/foralllovers.png");
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+#info-btn {
+width: 38px;
+height: 37px;
+position: fixed;
+cursor: pointer;
+z-index: 9;
+top: 16px;
+right: 16px;
+background: url("../img/foralllovers.png");
+background-size: 100%;
+background-repeat: no-repeat;
+}
+#info-btn:hover {
+  background-position: 0 -76px;
+}
+#info-btn.show {
+  background-position: 0 -38px;
+  opacity: 0.35;
+}
+#info-overlay {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 100%;
+  top: 0px;
+  position: fixed;
+  z-index: 6;
+  text-align: center;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+}
+#info-overlay.show {
+  opacity: 1;
+  left: 0px;
+}
+#info-overlay #text {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  display: table;
+  top: 0px;
+  left: 15%;
+}
+#info-overlay #text h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+#info-overlay #text h1 a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #0000FF;
+}
+#info-overlay #social {
+    bottom: 80px;
+    height: 40px;
+    left: 50%;
+    margin: 0 0 0 -33px;
+    position: inherit;
+    right: 50%;
+    text-align: center;
+    width: 0;
+}
+#info-overlay #social #fb {
+  float: left;
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+}
+#info-overlay #social #tw {
+  float: left;
+  width: 100px;
+}
+#info-overlay #credits {
+  position: fixed;
+  width: 520px;
+  bottom: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  left: 50%;
+  margin: 0 0 0 -260px;
+}
+#info-overlay #credits a {
+	color: #888;
+  width: 520px;
+  bottom: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  left: 50%;
+}
+#info-overlay #credits a:last-child {
+  margin-right: 0px;
+}
+#info-overlay #credits a span {
+  display: none;
+}
+
+
+/*----------------------
+	Camera slide up
+-----------------------*/
+
+
+#camera{
+	background:url('../img/cam_bg.png') repeat-y;
+	border:1px solid #f0f0f0;
+	height:400px;
+	width:400px;
+	position:fixed;
+	bottom: 230px;
+	left:55%;
+	margin-left:-300px;
+
+	-moz-border-radius:4px 4px 0 0;
+	-webkit-border-radius:4px 4px 0 0;
+	border-radius:4px 4px;
+	
+	-moz-box-shadow:0 0 4px rgba(0,0,0,0.6);
+	-webkit-box-shadow:0 0 4px rgba(0,0,0,0.6);
+	box-shadow:0 0 4px rgba(0,0,0,0.6);
+}
+/*
+.camTop{
+	background:url('../img/cam.png') no-repeat center center;
+	width:100%;
+	height:66px;
+	position:absolute;
+	top:0;
+	left:0;
+	cursor:pointer;
+} */
+
+.settings{
+	background:url('../img/settings.png') no-repeat;
+	cursor: pointer;
+	height: 15px;
+	position: absolute;
+	right: -1px;
+	top: 385px;
+	width: 18px;
+	background-size: 17px 30px;
+}
+
+.settings:hover{
+	background-position:left bottom;
+}
+
+#screen{
+	width:370px;
+	height:370px;
+	margin: 15px auto 22px;
+	background:#ccc;
+	
+	line-height: 360px;
+    text-align: center;
+	color:#666;
+}
+
+.buttonPane{
+	text-align: center;
+}
+
+.bigheart{
+	background:url('../img/bigheart.png') no-repeat;
+	height:400px;
+	width:400px;
+	position:fixed;
+	bottom: 230px;
+	left:55%;
+	margin-left:-300px;
+
+}
+
+
+.tooltip{
+background: url('../img/kissbubble2.gif') no-repeat;
+position: inherit;
+width: 370px;
+height: 370px;
+/* right: -145px; */
+/* top: -118px; */
+margin-left: 14px;
+margin-top: 14px;
+}
+
+.delayImg {opacity:0;}​
+
+.blueButton,
+.greenButton{
+	background:url('../img/buttons.png') no-repeat;
+	text-shadow:0px 0px 0px #277c9b;
+	color:#fff !important;
+	width:99px;
+	height:38px;
+	border:none;
+	text-decoration:none;
+	display:inline-block;
+	font-size: 16px;
+	line-height: 32px;
+	text-align: center;
+	margin: 0 4px;
+}
+
+.greenButton{
+	background:url('../img/buttons.png') no-repeat right top;
+	text-shadow:1px 1px 1px #498917;
+}
+
+.blueButton:hover,
+.greenButton:hover{
+	background-position:left bottom;
+	text-decoration:none !important;
+}
+
+.greenButton:hover{
+	background-position:right bottom;
+}
+
+.blueButton:active,
+.greenButton:active{
+	position:relative;
+	bottom:-1px;
+}
+
+.hidden{
+	display:none;
+}
+
+
+/*-------------------------
+	Generic styles
+--------------------------*/
+
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+
+#footer {
+z-index: 9999;
+height: 35px;
+background: rgba(255, 0, 0, 0.9);
+position: fixed;
+bottom: 0px;
+left: 0px;
+width: 100%;
+font-weight: 300;
+-webkit-animation: slideUp 1.5s cubic-bezier(0.565, 1.65, 0.765, 0.88);
+-webkit-font-smoothing: subpixel-antialiased;
+-webkit-font-feature-settings: 'liga' 1;
+}
+
+
+
+
+
+
+

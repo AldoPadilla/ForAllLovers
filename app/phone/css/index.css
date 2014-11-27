@@ -1,0 +1,91 @@
+@-ms-viewport
+{
+	width: 380px;
+}
+
+@-webkit-viewport
+{
+	width: 380px;
+}
+
+@-o-viewport
+{
+	width: 380px;
+}
+
+@-moz-viewport
+{
+	width: 380px;
+}
+
+@viewport
+{
+	width: 380px;
+}
+
+.html
+{
+	/* background-color: #FD0E0A; */
+}
+
+#page
+{
+	z-index: 1;
+	width: 380px;
+	min-height: 0px;
+	padding-bottom: 671px;
+}
+
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
+h3{
+font-family: 'Press Start 2P', cursive;
+font-weight: 400;
+font-size: 9px;
+color: rgb(134, 134, 134);
+}
+
+.footsie {
+	position: fixed;
+	text-align: center;
+	top: 49%;
+	z-index: 999;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+#info-btn {
+	width: 38px;
+	height: 37px;
+	/* margin-left: auto; */
+	position: inherit;
+	/* cursor: pointer; */
+	z-index: 9;
+	/* margin-right: 11px; */
+	top: 40%;
+	background: url("/assets/img/foralllovers.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/* margin-right: 10px; */
+	right: 45%;
+	left: 45%;
+}
+
+#credits {
+	position: fixed;
+	font-family: sans-serif;
+	width: 95%;
+	bottom: 30px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 19px;
+	margin-left: auto;
+	margin-right: auto;
+	align-content: center;
+}
+
+
